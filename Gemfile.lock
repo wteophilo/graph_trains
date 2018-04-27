@@ -22,7 +22,7 @@ GEM
     rspec-support (3.7.1)
 
 PLATFORMS
-  x86-mingw32
+  ruby
 
 DEPENDENCIES
   pry
