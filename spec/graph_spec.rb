@@ -51,19 +51,21 @@ describe Graph  do
 		expect(@graph.distance_between(route)).to eq(22)
 	end
 
-	xit 'Output #5: distance_between_AED' do
+	it 'Output #5: distance_between_AED' do
 		route = Array.new
 		route << @a
 		route << @e
 		route << @d		
-		expect(@graph.distance_between(route)).to eq(0)
+		#binding.pry
+		#expect(@graph.distance_between(route)).to raise_exception
+		expect(@graph.distance_between(route)).to eq("NO SUCH ROUTE")
 	end
 
 	it 'Output #6: num_stops_CC3' do
 		expect(@graph.num_stops(@c,@c,3)).to eq(2)
 	end
 
-	it 'Output #7: num_stops_AC4' do
+	it 'Output #7: num_stops_AC4' do		
 		expect(@graph.num_stops(@a,@c,4)).to eq(4)
 	end
 

@@ -82,16 +82,24 @@ The proposed algorithm aims to solve the problem of Kiwiland, below we have an i
 
 ![graph]( https://github.com/wteophilo/graph_trains/raw/master/img/graph.png)
 
+###Programming Language
+* Ruby 2.2
+* Test: Rspec
+
 ### Class Diagram
 ![diagram_class]( https://github.com/wteophilo/graph_trains/raw/master/img/trains_uml.png)
 
 ## Running the application
+
+To run the project acess the folder and run the script bellow:
 ```
 ruby main.rb
 ```
 
 ## How executing tests
 
+To run the project acess the folder and run the script bellow
 ```
-rspec spec/graph_spec.rb
+bundle install
+bundle exec rspec spec
 ```

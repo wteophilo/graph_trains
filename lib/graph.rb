@@ -16,19 +16,24 @@ class Graph
 		return 0 if cities.count < 2 
 		i = 0
 		distance = 0
+		depth  = 0 
 		while i < cities.count-1
 			if @routes.key?(cities[i])
 				edge = @routes[cities[i]]
 				while !edge.nil?
 					if edge.destination == cities[i+1]
 						distance = distance + edge.weight
+						depth  = depth  +1
 						break
 					end
 					edge = edge.next
-				end 
+				end
+			else
+				distance = "NO SUCH ROUTE"
 			end
 			i = i+1
 		end
+		distance = "NO SUCH ROUTE" if depth != cities.count-1
 		distance
 	end
 
