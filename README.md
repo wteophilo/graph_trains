@@ -1,5 +1,3 @@
-
-
 # Problem:
 
 The local commuter railroad services a number of towns in Kiwiland.  
@@ -82,9 +80,10 @@ Expected Output:
 # Started
 The proposed algorithm aims to solve the problem of Kiwiland, below we have an image of the graph:
 
+![graph]( https://github.com/wteophilo/graph_trains/raw/master/img/graph.png)
 
-### Diagrama de classe
-
+### Class Diagram
+![diagram_class]( https://github.com/wteophilo/graph_trains/raw/master/img/trains_uml.png)
 
 ## Running the application
 ```
