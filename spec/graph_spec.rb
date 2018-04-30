@@ -1,6 +1,7 @@
 require_relative '../lib/graph'
 require_relative '../lib/node'
 require_relative '../lib/edge'
+require 'pry'
 
 describe Graph  do	
 	before(:each) do
@@ -10,10 +11,10 @@ describe Graph  do
 		@d = Node.new('d')
 		@e = Node.new('e')
 		@graph = Graph.new
-		@graph.add_route(@a,Edge.new(@a,@b,5).nextRoute(Edge.new(@a,@d,5).nextRoute(Edge.new(@a,@e,7))))
+		@graph.add_route(@a,Edge.new(@a,@b,5).next_route(Edge.new(@a,@d,5).next_route(Edge.new(@a,@e,7))))
 		@graph.add_route(@b,Edge.new(@b,@c,4))
-		@graph.add_route(@c,Edge.new(@c,@d,8).nextRoute(Edge.new(@c,@e,2)))
-		@graph.add_route(@d,Edge.new(@d,@c,8).nextRoute(Edge.new(@d,@e,6)))
+		@graph.add_route(@c,Edge.new(@c,@d,8).next_route(Edge.new(@c,@e,2)))
+		@graph.add_route(@d,Edge.new(@d,@c,8).next_route(Edge.new(@d,@e,6)))
 		@graph.add_route(@e,Edge.new(@e,@b,3))
 
 	end
